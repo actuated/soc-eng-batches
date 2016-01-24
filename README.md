@@ -9,7 +9,7 @@ These batches are intended to be put on a flash drive.
 * In the same directory level as **run.bat**, create the directories **drivers** and **logs**.
 * Place **framework.cmd** in the **drivers** directory.
   - This is the malicious batch, which is called by run.bat.
-  - See the variables **strLOCALUSER**, **strDOMUSER**, and **strMYPASS**. These values will be used when the malicious batch attempts to create local and domain user accounts.
+  - Set the variables **strLOCALUSER**, **strDOMUSER**, and **strMYPASS**. These values will be used when the malicious batch attempts to create local and domain user accounts.
 
 # Usage
 * Follow the setup instructions to load the batches onto your flash drive.
