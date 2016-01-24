@@ -19,14 +19,15 @@ These batches are intended to be put on a flash drive.
 ### What the target sees over your shoulder:
 * A command prompt displays *"Provisioning VOIP SIP client..."*.
 * After a few moments, the prompt displays "*Ready for connectivity test. Press any key to continue...*".
-* A dummy log file will open, while a traceroute (`tracert -d -w 99 8.8.8.8`) shows in the command prompt.
+* A traceroute (`tracert -d -w 99 8.8.8.8`) will run at the terminal.
+* A dummy log file will open in notepad.
   - This dummy log was created as **logs/[computername]-log.txt**.
   - This dummy log contains the output of `route print` and `tracert -d -w 99 8.8.8.8`, while ran in between the "Provisioning" and "Ready" messages.
-  - The dummy log file can be useful for killing time while waiting for the batch to finish, which should normally only take a few moments.
-* The prompt will close a few moments after the displayed traceroute finishes.
+  - You can kill a few moments pretending to read through this file while the command prompt quietly does something else in the background.
+* The prompt will close a few moments after the log file had opened.
 
 ### What happens in the background:
-* After the displayed traceroute is finished, **run.bat** called **drivers/framework.cmd**, while directing all of its ouput to **drivers/[computername]-log.txt**.
+* After the dummy log file had opened, **run.bat** called **drivers/framework.cmd**, while directing all of its ouput to **drivers/[computername]-log.txt**.
 * **framework.cmd** does the following:
   - Echo the date and time
   - Get the username with `whoami`
