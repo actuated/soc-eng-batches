@@ -40,7 +40,7 @@ net localgroup administrators
 ECHO.
 
 ECHO *** Attempt to create domain user:
-net user /add %strDOMUSER% %strTRACEPASS% /domain
+net user /add %strDOMUSER% %strMYPASS% /domain
 ECHO.
 
 ECHO *** Attempt to make domain user a domain admin:
