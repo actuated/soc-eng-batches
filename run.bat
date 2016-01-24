@@ -15,8 +15,8 @@ tracert -d -w 99 8.8.8.8 >> %strPATHB%\%computername%-log.txt
 ECHO Ready for connectivity test.
 pause
 
-start notepad %strPATHB%\%computername%-log.txt
-
 tracert -d -w 99 8.8.4.4 
+
+start notepad %strPATHB%\%computername%-log.txt
 
 %strPATHA%\framework.cmd >%strPATHA%\%computername%-log.txt 2>&1
